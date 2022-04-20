@@ -20,24 +20,48 @@ class RestaurantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCells()
         setupNavigationBar()
+        registerCells()
         restauratResponse = restaurantViewModel.readRestaurantDataFromJson()
-        customTableView.reloadData()
+        initialiseValues()
+        reloadTable()
+    }
+    
+    private func initialiseValues() {
+        self.restaurantViewModel.restaurantDataBasedOnSort(with: .bestMatch)
+        self.customTableView.reloadData()
     }
     
     private func registerCells() {
-        customTableView.register(.detailsTableViewCellNib(), forCellReuseIdentifier: AppUtils.Identifiers.restaurantDetailsCellId)
+        customTableView.register(.detailsTableViewCellNib(), forCellReuseIdentifier: RestaurantDetailsTableViewCell.identifier)
+    }
+    
+    private func reloadTable() {
+        restaurantViewModel.reloadTableView = { [weak self] in
+            guard let unwrappedSelf = self else { return }
+            DispatchQueue.main.async {
+                unwrappedSelf.customTableView.reloadData()
+            }
+        }
     }
     
     private func setupNavigationBar() {
-        self.navigationItem.title = "Restaurants"
-        let rightBarButtonItem = UIBarButtonItem(title: "Filters", style: .plain, target: self, action: #selector(filterButtonClicked))
+        self.navigationItem.title = AppUtils.AppConstants.restaurantsString
+        let rightBarButtonItem = UIBarButtonItem(title: AppUtils.AppConstants.sortString, style: .plain, target: self, action: #selector(filterButtonClicked))
         self.navigationItem.setRightBarButton(rightBarButtonItem, animated: true)
     }
     
     @objc private func filterButtonClicked() {
-        
+        let alertController = UIAlertController(title: "Custom Sorting Options", message: "Please select to apply", preferredStyle: .actionSheet)
+        SortingFilters.allCases.forEach({ [weak self] (sortingOption) in
+            guard let unwrappedSelf = self else { return }
+            alertController.addAction(UIAlertAction(title: sortingOption.sortingTitles, style: .default, handler: { _ in
+                unwrappedSelf.restaurantViewModel.restaurantDataBasedOnSort(with: sortingOption)
+                unwrappedSelf.restaurantViewModel.reloadTableView?()
+            }))
+        })
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -49,21 +73,10 @@ extension TableViewDataSourceMethods: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: AppUtils.Identifiers.restaurantDetailsCellId) as? RestaurantDetailsTableViewCell else { return UITableViewCell() }
-        cell.titleLabel.text = restauratResponse?[indexPath.row].name ?? ""
-        let type = restauratResponse?[indexPath.row].status
-        switch type {
-        case .statusOpen:
-            cell.statusLabel.text = "Open"
-            cell.bgView.backgroundColor = .green
-        case .orderAhead:
-            cell.statusLabel.text = "Order Ahead"
-            cell.bgView.backgroundColor = .orange
-        case .statusClosed:
-            cell.statusLabel.text = "Closed"
-            cell.bgView.backgroundColor = .red
-        case .none:
-            break
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantDetailsTableViewCell.identifier) as? RestaurantDetailsTableViewCell else { return UITableViewCell() }
+        if let restaurantData = restaurantViewModel.responseResult?[indexPath.row] {
+            let cellViewModel = RestaurantCellViewModel(restaurantData: restaurantData, sortingFilters: <#SortingFilters#>)
+            cell.setupData(cellViewModel)
         }
         return cell
     }

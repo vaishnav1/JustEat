@@ -22,6 +22,7 @@
 		A07A3676280D666B001A259D /* RestaurantDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07A3674280D666B001A259D /* RestaurantDetailsTableViewCell.xib */; };
 		A07A3679280D9C2A001A259D /* UINib+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3678280D9C2A001A259D /* UINib+Extension.swift */; };
 		A07A367B280DAA6E001A259D /* RestaurantCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A367A280DAA6E001A259D /* RestaurantCellViewModel.swift */; };
+		A0C80558280ED8870063F6AC /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C80557280ED8870063F6AC /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A07A3674280D666B001A259D /* RestaurantDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		A07A3678280D9C2A001A259D /* UINib+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Extension.swift"; sourceTree = "<group>"; };
 		A07A367A280DAA6E001A259D /* RestaurantCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCellViewModel.swift; sourceTree = "<group>"; };
+		A0C80557280ED8870063F6AC /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				A07A3678280D9C2A001A259D /* UINib+Extension.swift */,
+				A0C80557280ED8870063F6AC /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				A07A35F928095B36001A259D /* SceneDelegate.swift in Sources */,
 				A07A3675280D666B001A259D /* RestaurantDetailsTableViewCell.swift in Sources */,
 				A07A36182809BD6D001A259D /* RestaurantResponseModel.swift in Sources */,
+				A0C80558280ED8870063F6AC /* UITableView+Extension.swift in Sources */,
 				A07A361128095FD5001A259D /* AppUtils.swift in Sources */,
 				A07A3679280D9C2A001A259D /* UINib+Extension.swift in Sources */,
 			);

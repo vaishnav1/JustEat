@@ -15,11 +15,18 @@ class RestaurantDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    func setupData() {
-
+    func setupData(_ cellViewModel: RestaurantCellViewModel) {
+        self.titleLabel.text = cellViewModel.restaurantName
+        self.statusLabel.text = cellViewModel.status.rawValue.capitalized
+        self.subtTitleLabel.text = cellViewModel.totalValue
+        
+        switch cellViewModel.status {
+        case .statusOpen:
+            self.bgView.backgroundColor = .green.withAlphaComponent(0.5)
+        case .orderAhead:
+            self.bgView.backgroundColor = .orange.withAlphaComponent(0.5)
+        case .statusClosed:
+            self.bgView.backgroundColor = .red.withAlphaComponent(0.5)
+        }
     }
 }

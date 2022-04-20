@@ -11,6 +11,6 @@ import UIKit
 extension UINib {
     
     class func detailsTableViewCellNib() -> UINib {
-        return UINib(nibName: AppUtils.Identifiers.restaurantDetailsCellId, bundle: Bundle.main)
+        return UINib(nibName: RestaurantDetailsTableViewCell.identifier, bundle: Bundle.main)
     }
 }
