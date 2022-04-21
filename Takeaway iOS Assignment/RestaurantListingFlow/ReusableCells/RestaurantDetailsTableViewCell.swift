@@ -15,10 +15,10 @@ class RestaurantDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
     
-    func setupData(_ cellViewModel: RestaurantCellViewModel) {
+    func setupData(_ cellViewModel: RestaurantCellDataProtocol) {
         self.titleLabel.text = cellViewModel.restaurantName
         self.statusLabel.text = cellViewModel.status.rawValue.capitalized
-        self.subtTitleLabel.text = cellViewModel.totalValue
+        self.subtTitleLabel.text = cellViewModel.filterOption + "-> " + cellViewModel.filterOptionValue
         
         switch cellViewModel.status {
         case .statusOpen:

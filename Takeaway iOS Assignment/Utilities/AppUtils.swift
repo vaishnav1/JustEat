@@ -32,6 +32,7 @@ struct AppUtils {
         //TitleString
         static let restaurantsString = "Restaurants"
         static let sortString = "Sort"
+        static let searchRestaurantString = "Search desired restaurants"
     }
     
     struct ErrorMessagesStrings {

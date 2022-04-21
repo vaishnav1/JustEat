@@ -56,7 +56,7 @@ enum SortingFilters: String, CaseIterable {
 class RestaurantViewModel {
     
     //MARK: - Properties
-    private var responseResult: [Restaurant]?
+    var responseResult: [Restaurant] = []
     private var sortOptionSelected: SortingFilters?
     
     //MARK: - Closures
@@ -64,16 +64,21 @@ class RestaurantViewModel {
     
     //MARK: - Sorting Methods
     func restaurantDataBasedOnSort(with filterOption: SortingFilters) {
-        responseResult?.sort { $0.sortingValues[filterOption.rawValue] ?? 0.0 < $1.sortingValues[filterOption.rawValue] ?? 0.0 }
-        responseResult?.sort { $0.status < $1.status }
+        sortOptionSelected = filterOption
+        responseResult.sort { $0.sortingValues[filterOption.rawValue] ?? 0.0 > $1.sortingValues[filterOption.rawValue] ?? 0.0 }
+        responseResult.sort { $0.status < $1.status }
         self.reloadTableView?()
     }
     
+    //MARK: - Binding cell view model
+    func restaurantCellViewModel(at indexPath: IndexPath) -> RestaurantCellDataProtocol {
+        RestaurantCellViewModel(restaurantData: responseResult[indexPath.row], sortingFilters: sortOptionSelected ?? .bestMatch)
+    }
     
     //MARK: - API Calls
-     func readRestaurantDataFromJson() -> [Restaurant] {
+     func readRestaurantDataFromJson() {
         guard let filePath = Bundle.main.url(forResource: AppUtils.AppConstants.jsonFileNameString, withExtension: "json") else {
-            return []
+            return
         }
         do {
             let jsonData = try Data(contentsOf: filePath, options: .mappedIfSafe)
@@ -88,7 +93,10 @@ class RestaurantViewModel {
         } catch {
             responseResult = []
         }
-        return responseResult ?? []
+    }
+    
+    func numberOfRestaurantsCount() -> Int {
+        return responseResult.count
     }
     
     private func sortRestaurantsOnStatus(responseData: inout RestaurantResponseModel) -> RestaurantResponseModel {
@@ -96,7 +104,13 @@ class RestaurantViewModel {
         return responseData
     }
     
-    private func sortReataurantsOnSorting() {
-        
+    //MARK: - Search bar handling methods
+    func searchTextEntered(_ text: String) {
+        if !text.isEmpty {
+            self.responseResult = self.responseResult.filter { $0.name.lowercased().hasPrefix(text.lowercased()) }
+        } else {
+            readRestaurantDataFromJson()
+        }
+        self.reloadTableView?()
     }
 }

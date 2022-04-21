@@ -17,27 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1X8-jJ-C2u">
-                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Ppr-ST-iCV"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="GmK-0c-ie8"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="Search Restaurants" translatesAutoresizingMaskIntoConstraints="NO" id="16W-58-u3n">
-                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1X8-jJ-C2u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3cb-1g-FLg"/>
-                            <constraint firstItem="1X8-jJ-C2u" firstAttribute="top" secondItem="16W-58-u3n" secondAttribute="bottom" id="9NM-di-9WS"/>
-                            <constraint firstItem="16W-58-u3n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IpT-H0-V0z"/>
-                            <constraint firstItem="16W-58-u3n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="irv-fj-Hra"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1X8-jJ-C2u" secondAttribute="bottom" id="pFc-X0-fHq"/>
-                            <constraint firstItem="16W-58-u3n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wfi-eG-iwH"/>
+                            <constraint firstItem="1X8-jJ-C2u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="skT-S0-sdk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1X8-jJ-C2u" secondAttribute="trailing" id="y9g-pJ-4gQ"/>
                         </constraints>
                     </view>

@@ -8,6 +8,7 @@
 import UIKit
 
 private typealias TableViewDataSourceMethods = RestaurantViewController
+private typealias SearchControllerDelegateHandlers = RestaurantViewController
 
 class RestaurantViewController: UIViewController {
     
@@ -16,20 +17,20 @@ class RestaurantViewController: UIViewController {
     
     //MARK: - Properties
     var restaurantViewModel = RestaurantViewModel()
-    var restauratResponse: [Restaurant]?
+    private let customSearchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupSearchBar()
         registerCells()
-        restauratResponse = restaurantViewModel.readRestaurantDataFromJson()
+        restaurantViewModel.readRestaurantDataFromJson()
         initialiseValues()
         reloadTable()
     }
     
     private func initialiseValues() {
         self.restaurantViewModel.restaurantDataBasedOnSort(with: .bestMatch)
-        self.customTableView.reloadData()
     }
     
     private func registerCells() {
@@ -45,6 +46,12 @@ class RestaurantViewController: UIViewController {
         }
     }
     
+    private func setupSearchBar() {
+        customSearchController.searchBar.placeholder = AppUtils.AppConstants.searchRestaurantString
+        navigationItem.searchController = customSearchController
+        customSearchController.searchBar.delegate = self
+    }
+    
     private func setupNavigationBar() {
         self.navigationItem.title = AppUtils.AppConstants.restaurantsString
         let rightBarButtonItem = UIBarButtonItem(title: AppUtils.AppConstants.sortString, style: .plain, target: self, action: #selector(filterButtonClicked))
@@ -57,7 +64,6 @@ class RestaurantViewController: UIViewController {
             guard let unwrappedSelf = self else { return }
             alertController.addAction(UIAlertAction(title: sortingOption.sortingTitles, style: .default, handler: { _ in
                 unwrappedSelf.restaurantViewModel.restaurantDataBasedOnSort(with: sortingOption)
-                unwrappedSelf.restaurantViewModel.reloadTableView?()
             }))
         })
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -69,15 +75,24 @@ class RestaurantViewController: UIViewController {
 extension TableViewDataSourceMethods: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restauratResponse?.count ?? 0
+        return restaurantViewModel.numberOfRestaurantsCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantDetailsTableViewCell.identifier) as? RestaurantDetailsTableViewCell else { return UITableViewCell() }
-        if let restaurantData = restaurantViewModel.responseResult?[indexPath.row] {
-            let cellViewModel = RestaurantCellViewModel(restaurantData: restaurantData, sortingFilters: <#SortingFilters#>)
+            let cellViewModel = restaurantViewModel.restaurantCellViewModel(at: indexPath)
             cell.setupData(cellViewModel)
-        }
         return cell
+    }
+}
+
+
+extension SearchControllerDelegateHandlers: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        restaurantViewModel.searchTextEntered(searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        restaurantViewModel.searchTextEntered("")
     }
 }
