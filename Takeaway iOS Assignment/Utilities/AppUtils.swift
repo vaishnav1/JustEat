@@ -10,7 +10,7 @@ import Foundation
 struct AppUtils {
     struct AppConstants {
         //Misc
-        static let jsonFileNameString = "takeawayexample"
+        static let jsonFileNameString = "TakeawayData"
         
         //FilterStrings
         static let bestMatchString = "Best Match"
@@ -33,6 +33,8 @@ struct AppUtils {
         static let restaurantsString = "Restaurants"
         static let sortString = "Sort"
         static let searchRestaurantString = "Search desired restaurants"
+        static let selectToApplyString = "Please select to apply"
+        static let cancelString = "Cancel"
     }
     
     struct ErrorMessagesStrings {

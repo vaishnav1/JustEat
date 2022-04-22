@@ -26,7 +26,7 @@ class RestaurantDetailsTableViewCell: UITableViewCell {
         case .orderAhead:
             self.bgView.backgroundColor = .orange.withAlphaComponent(0.5)
         case .statusClosed:
-            self.bgView.backgroundColor = .red.withAlphaComponent(0.5)
+            self.bgView.backgroundColor = .darkGray.withAlphaComponent(0.5)
         }
     }
 }

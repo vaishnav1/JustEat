@@ -1,5 +1,5 @@
 //
-//  UITableView+Extension.swift
+//  UITableViewCell+Extension.swift
 //  Takeaway iOS Assignment
 //
 //  Created by vaishnav.chidambar on 19/04/22.

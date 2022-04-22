@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00F75972811AA0E00563785 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00F75962811AA0E00563785 /* ViewModelTests.swift */; };
 		A07A35F728095B36001A259D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A35F628095B36001A259D /* AppDelegate.swift */; };
 		A07A35F928095B36001A259D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A35F828095B36001A259D /* SceneDelegate.swift */; };
 		A07A35FE28095B36001A259D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A35FC28095B36001A259D /* Main.storyboard */; };
@@ -14,15 +15,24 @@
 		A07A360328095B38001A259D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07A360128095B38001A259D /* LaunchScreen.storyboard */; };
 		A07A361128095FD5001A259D /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A361028095FD5001A259D /* AppUtils.swift */; };
 		A07A36132809618E001A259D /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A36122809618E001A259D /* RestaurantViewController.swift */; };
-		A07A36152809B6C9001A259D /* takeawayexample.json in Resources */ = {isa = PBXBuildFile; fileRef = A07A36142809B6C9001A259D /* takeawayexample.json */; };
+		A07A36152809B6C9001A259D /* TakeawayData.json in Resources */ = {isa = PBXBuildFile; fileRef = A07A36142809B6C9001A259D /* TakeawayData.json */; };
 		A07A36182809BD6D001A259D /* RestaurantResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A36172809BD6D001A259D /* RestaurantResponseModel.swift */; };
-		A07A36202809BF3B001A259D /* Takeaway_iOS_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A361F2809BF3B001A259D /* Takeaway_iOS_AssignmentTests.swift */; };
 		A07A3671280D5810001A259D /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3670280D5810001A259D /* RestaurantViewModel.swift */; };
 		A07A3675280D666B001A259D /* RestaurantDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3673280D666B001A259D /* RestaurantDetailsTableViewCell.swift */; };
 		A07A3676280D666B001A259D /* RestaurantDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07A3674280D666B001A259D /* RestaurantDetailsTableViewCell.xib */; };
 		A07A3679280D9C2A001A259D /* UINib+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3678280D9C2A001A259D /* UINib+Extension.swift */; };
 		A07A367B280DAA6E001A259D /* RestaurantCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A367A280DAA6E001A259D /* RestaurantCellViewModel.swift */; };
-		A0C80558280ED8870063F6AC /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C80557280ED8870063F6AC /* UITableView+Extension.swift */; };
+		A09F8CD928127225006C912C /* TestEmptyData.json in Resources */ = {isa = PBXBuildFile; fileRef = A09F8CD828127225006C912C /* TestEmptyData.json */; };
+		A09F8CDB2812724A006C912C /* TestSampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = A09F8CDA2812724A006C912C /* TestSampleData.json */; };
+		A09F8CE0281294BF006C912C /* ResponseModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F8CDF281294BF006C912C /* ResponseModelTests.swift */; };
+		A09F8CE12812976D006C912C /* RestaurantResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A36172809BD6D001A259D /* RestaurantResponseModel.swift */; };
+		A09F8CE32812A785006C912C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A09F8CE22812A785006C912C /* README.md */; };
+		A09F8CE72812AC06006C912C /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3670280D5810001A259D /* RestaurantViewModel.swift */; };
+		A09F8CE82812AECE006C912C /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A361028095FD5001A259D /* AppUtils.swift */; };
+		A09F8CE92812AEEE006C912C /* RestaurantCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A367A280DAA6E001A259D /* RestaurantCellViewModel.swift */; };
+		A09F8CEB2812B793006C912C /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F8CEA2812B793006C912C /* DataHandler.swift */; };
+		A09F8CEC2812B795006C912C /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F8CEA2812B793006C912C /* DataHandler.swift */; };
+		A0C80558280ED8870063F6AC /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C80557280ED8870063F6AC /* UITableViewCell+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A00F75962811AA0E00563785 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		A07A35F328095B36001A259D /* Takeaway iOS Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Takeaway iOS Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07A35F628095B36001A259D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A07A35F828095B36001A259D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,16 +56,20 @@
 		A07A360428095B38001A259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07A361028095FD5001A259D /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		A07A36122809618E001A259D /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
-		A07A36142809B6C9001A259D /* takeawayexample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = takeawayexample.json; sourceTree = "<group>"; };
+		A07A36142809B6C9001A259D /* TakeawayData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TakeawayData.json; sourceTree = "<group>"; };
 		A07A36172809BD6D001A259D /* RestaurantResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantResponseModel.swift; sourceTree = "<group>"; };
 		A07A361D2809BF3B001A259D /* Takeaway iOS AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Takeaway iOS AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A07A361F2809BF3B001A259D /* Takeaway_iOS_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Takeaway_iOS_AssignmentTests.swift; sourceTree = "<group>"; };
 		A07A3670280D5810001A259D /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
 		A07A3673280D666B001A259D /* RestaurantDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		A07A3674280D666B001A259D /* RestaurantDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		A07A3678280D9C2A001A259D /* UINib+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Extension.swift"; sourceTree = "<group>"; };
 		A07A367A280DAA6E001A259D /* RestaurantCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCellViewModel.swift; sourceTree = "<group>"; };
-		A0C80557280ED8870063F6AC /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		A09F8CD828127225006C912C /* TestEmptyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestEmptyData.json; sourceTree = "<group>"; };
+		A09F8CDA2812724A006C912C /* TestSampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestSampleData.json; sourceTree = "<group>"; };
+		A09F8CDF281294BF006C912C /* ResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModelTests.swift; sourceTree = "<group>"; };
+		A09F8CE22812A785006C912C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "Takeaway iOS Assignment/README.md"; sourceTree = "<group>"; };
+		A09F8CEA2812B793006C912C /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		A0C80557280ED8870063F6AC /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +90,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A00F75952811A9D300563785 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				A00F75962811AA0E00563785 /* ViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
 		A07A35EA28095B36001A259D = {
 			isa = PBXGroup;
 			children = (
+				A09F8CE22812A785006C912C /* README.md */,
 				A07A35F528095B36001A259D /* Takeaway iOS Assignment */,
 				A07A361E2809BF3B001A259D /* Takeaway iOS AssignmentTests */,
 				A07A35F428095B36001A259D /* Products */,
@@ -153,7 +177,7 @@
 		A07A36162809B6CF001A259D /* DataFiles */ = {
 			isa = PBXGroup;
 			children = (
-				A07A36142809B6C9001A259D /* takeawayexample.json */,
+				A07A36142809B6C9001A259D /* TakeawayData.json */,
 			);
 			path = DataFiles;
 			sourceTree = "<group>";
@@ -161,7 +185,9 @@
 		A07A361E2809BF3B001A259D /* Takeaway iOS AssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				A07A361F2809BF3B001A259D /* Takeaway_iOS_AssignmentTests.swift */,
+				A09F8CED2812CE32006C912C /* TestDataFiles */,
+				A09F8CDC2812948B006C912C /* ModelTests */,
+				A00F75952811A9D300563785 /* ViewModelTests */,
 			);
 			path = "Takeaway iOS AssignmentTests";
 			sourceTree = "<group>";
@@ -188,6 +214,7 @@
 		A07A366F280D54A6001A259D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A09F8CE42812AB26006C912C /* DataHandlers */,
 				A07A3670280D5810001A259D /* RestaurantViewModel.swift */,
 				A07A367A280DAA6E001A259D /* RestaurantCellViewModel.swift */,
 			);
@@ -207,9 +234,34 @@
 			isa = PBXGroup;
 			children = (
 				A07A3678280D9C2A001A259D /* UINib+Extension.swift */,
-				A0C80557280ED8870063F6AC /* UITableView+Extension.swift */,
+				A0C80557280ED8870063F6AC /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A09F8CDC2812948B006C912C /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				A09F8CDF281294BF006C912C /* ResponseModelTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		A09F8CE42812AB26006C912C /* DataHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				A09F8CEA2812B793006C912C /* DataHandler.swift */,
+			);
+			path = DataHandlers;
+			sourceTree = "<group>";
+		};
+		A09F8CED2812CE32006C912C /* TestDataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A09F8CD828127225006C912C /* TestEmptyData.json */,
+				A09F8CDA2812724A006C912C /* TestSampleData.json */,
+			);
+			path = TestDataFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +317,7 @@
 					};
 					A07A361C2809BF3B001A259D = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 						TestTargetID = A07A35F228095B36001A259D;
 					};
 				};
@@ -297,7 +350,7 @@
 				A07A360328095B38001A259D /* LaunchScreen.storyboard in Resources */,
 				A07A360028095B38001A259D /* Assets.xcassets in Resources */,
 				A07A35FE28095B36001A259D /* Main.storyboard in Resources */,
-				A07A36152809B6C9001A259D /* takeawayexample.json in Resources */,
+				A07A36152809B6C9001A259D /* TakeawayData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +358,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09F8CE32812A785006C912C /* README.md in Resources */,
+				A09F8CD928127225006C912C /* TestEmptyData.json in Resources */,
+				A09F8CDB2812724A006C912C /* TestSampleData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,13 +372,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07A35F728095B36001A259D /* AppDelegate.swift in Sources */,
+				A09F8CEB2812B793006C912C /* DataHandler.swift in Sources */,
 				A07A3671280D5810001A259D /* RestaurantViewModel.swift in Sources */,
 				A07A367B280DAA6E001A259D /* RestaurantCellViewModel.swift in Sources */,
 				A07A36132809618E001A259D /* RestaurantViewController.swift in Sources */,
 				A07A35F928095B36001A259D /* SceneDelegate.swift in Sources */,
 				A07A3675280D666B001A259D /* RestaurantDetailsTableViewCell.swift in Sources */,
 				A07A36182809BD6D001A259D /* RestaurantResponseModel.swift in Sources */,
-				A0C80558280ED8870063F6AC /* UITableView+Extension.swift in Sources */,
+				A0C80558280ED8870063F6AC /* UITableViewCell+Extension.swift in Sources */,
 				A07A361128095FD5001A259D /* AppUtils.swift in Sources */,
 				A07A3679280D9C2A001A259D /* UINib+Extension.swift in Sources */,
 			);
@@ -332,7 +389,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A07A36202809BF3B001A259D /* Takeaway_iOS_AssignmentTests.swift in Sources */,
+				A09F8CE82812AECE006C912C /* AppUtils.swift in Sources */,
+				A09F8CEC2812B795006C912C /* DataHandler.swift in Sources */,
+				A09F8CE12812976D006C912C /* RestaurantResponseModel.swift in Sources */,
+				A09F8CE72812AC06006C912C /* RestaurantViewModel.swift in Sources */,
+				A09F8CE0281294BF006C912C /* ResponseModelTests.swift in Sources */,
+				A00F75972811AA0E00563785 /* ViewModelTests.swift in Sources */,
+				A09F8CE92812AEEE006C912C /* RestaurantCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,14 +603,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RNLJNFX7TQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.POC.Takeaway-iOS-AssignmentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Takeaway iOS Assignment.app/Takeaway iOS Assignment";
@@ -558,10 +628,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RNLJNFX7TQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.POC.Takeaway-iOS-AssignmentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

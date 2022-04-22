@@ -12,7 +12,7 @@ struct RestaurantResponseModel: Codable {
     var restaurants: [Restaurant]
 }
     // MARK: - Restaurant
-struct Restaurant: Codable {
+struct Restaurant: Codable, Equatable {
     let name: String
     let status: Status
     let sortingValues: [String: Double]

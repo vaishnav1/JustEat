@@ -76,8 +76,8 @@ class RestaurantViewModel {
     }
     
     //MARK: - API Calls
-     func readRestaurantDataFromJson() {
-        guard let filePath = Bundle.main.url(forResource: AppUtils.AppConstants.jsonFileNameString, withExtension: "json") else {
+    func readRestaurantDataFromJson(fileName: String = AppUtils.AppConstants.jsonFileNameString) {
+        guard let filePath = Bundle(for: type(of: self)).url(forResource: fileName, withExtension: "json") else {
             return
         }
         do {

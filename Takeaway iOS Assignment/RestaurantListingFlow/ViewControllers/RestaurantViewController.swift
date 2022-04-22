@@ -59,14 +59,14 @@ class RestaurantViewController: UIViewController {
     }
     
     @objc private func filterButtonClicked() {
-        let alertController = UIAlertController(title: "Custom Sorting Options", message: "Please select to apply", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "", message: AppUtils.AppConstants.selectToApplyString, preferredStyle: .actionSheet)
         SortingFilters.allCases.forEach({ [weak self] (sortingOption) in
             guard let unwrappedSelf = self else { return }
             alertController.addAction(UIAlertAction(title: sortingOption.sortingTitles, style: .default, handler: { _ in
                 unwrappedSelf.restaurantViewModel.restaurantDataBasedOnSort(with: sortingOption)
             }))
         })
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: AppUtils.AppConstants.cancelString, style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
 }
