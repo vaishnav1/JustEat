@@ -30,8 +30,6 @@
 		A09F8CE72812AC06006C912C /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3670280D5810001A259D /* RestaurantViewModel.swift */; };
 		A09F8CE82812AECE006C912C /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A361028095FD5001A259D /* AppUtils.swift */; };
 		A09F8CE92812AEEE006C912C /* RestaurantCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A367A280DAA6E001A259D /* RestaurantCellViewModel.swift */; };
-		A09F8CEB2812B793006C912C /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F8CEA2812B793006C912C /* DataHandler.swift */; };
-		A09F8CEC2812B795006C912C /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F8CEA2812B793006C912C /* DataHandler.swift */; };
 		A0C80558280ED8870063F6AC /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C80557280ED8870063F6AC /* UITableViewCell+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +66,6 @@
 		A09F8CDA2812724A006C912C /* TestSampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestSampleData.json; sourceTree = "<group>"; };
 		A09F8CDF281294BF006C912C /* ResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModelTests.swift; sourceTree = "<group>"; };
 		A09F8CE22812A785006C912C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "Takeaway iOS Assignment/README.md"; sourceTree = "<group>"; };
-		A09F8CEA2812B793006C912C /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		A0C80557280ED8870063F6AC /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +122,7 @@
 				A07A366C280D53D0001A259D /* RestaurantListingFlow */,
 				A07A360C28095B87001A259D /* Storyboards */,
 				A07A360F28095BE0001A259D /* Utilities */,
-				A07A360428095B38001A259D /* Info.plist */,
+				A09F8CF02812DD51006C912C /* PropertyLists */,
 			);
 			path = "Takeaway iOS Assignment";
 			sourceTree = "<group>";
@@ -214,7 +211,6 @@
 		A07A366F280D54A6001A259D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A09F8CE42812AB26006C912C /* DataHandlers */,
 				A07A3670280D5810001A259D /* RestaurantViewModel.swift */,
 				A07A367A280DAA6E001A259D /* RestaurantCellViewModel.swift */,
 			);
@@ -247,14 +243,6 @@
 			path = ModelTests;
 			sourceTree = "<group>";
 		};
-		A09F8CE42812AB26006C912C /* DataHandlers */ = {
-			isa = PBXGroup;
-			children = (
-				A09F8CEA2812B793006C912C /* DataHandler.swift */,
-			);
-			path = DataHandlers;
-			sourceTree = "<group>";
-		};
 		A09F8CED2812CE32006C912C /* TestDataFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +250,14 @@
 				A09F8CDA2812724A006C912C /* TestSampleData.json */,
 			);
 			path = TestDataFiles;
+			sourceTree = "<group>";
+		};
+		A09F8CF02812DD51006C912C /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+				A07A360428095B38001A259D /* Info.plist */,
+			);
+			path = PropertyLists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,7 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07A35F728095B36001A259D /* AppDelegate.swift in Sources */,
-				A09F8CEB2812B793006C912C /* DataHandler.swift in Sources */,
 				A07A3671280D5810001A259D /* RestaurantViewModel.swift in Sources */,
 				A07A367B280DAA6E001A259D /* RestaurantCellViewModel.swift in Sources */,
 				A07A36132809618E001A259D /* RestaurantViewController.swift in Sources */,
@@ -390,7 +385,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A09F8CE82812AECE006C912C /* AppUtils.swift in Sources */,
-				A09F8CEC2812B795006C912C /* DataHandler.swift in Sources */,
 				A09F8CE12812976D006C912C /* RestaurantResponseModel.swift in Sources */,
 				A09F8CE72812AC06006C912C /* RestaurantViewModel.swift in Sources */,
 				A09F8CE0281294BF006C912C /* ResponseModelTests.swift in Sources */,
