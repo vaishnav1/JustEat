@@ -14,6 +14,6 @@ Welcome reviewers :) , This is a assignment where it displays a list of Restaura
 
 Instructions:
 
--> Just fork the repository.
+-> Just Clone the repository.
 
 -> Build and run should get you going.
